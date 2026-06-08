@@ -1,0 +1,26 @@
+name: A basic flow with two jobs
+
+on: push
+
+jobs:
+  job1:
+    name: first job to run
+    runs-on: windows-latest
+
+    steps:
+      - name: step-one
+        uses: actions/checkout@v4
+
+      - name: step-two (list files)
+        run: ls -l
+
+      - name: step-three (print working directory)
+        run: pwd
+
+  job2:
+    name: second job to run
+    runs-on: windows-latest
+
+    steps:
+      - name: say hello
+        run: echo "Hello from job2"
