@@ -12,10 +12,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: step-two (list files)
-        run: ls -l
+        run: dir
 
       - name: step-three (print working directory)
-        run: pwd
+        run: cd
 
   job2:
     name: second job to run
